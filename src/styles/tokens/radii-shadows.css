@@ -1,0 +1,33 @@
+/* ============================================================
+   Folka — Radii, borders, shadows, motion
+   Soft, warm, friendly. Generous rounding; low-contrast shadows.
+   ============================================================ */
+:root {
+  /* Corner radii */
+  --radius-xs:   4px;
+  --radius-sm:   6px;
+  --radius-md:   10px;   /* inputs, buttons */
+  --radius-lg:   14px;   /* cards */
+  --radius-xl:   20px;   /* large panels, modals */
+  --radius-2xl:  28px;   /* hero / marketing cards */
+  --radius-pill: 999px;
+
+  /* Border widths */
+  --border-w:    1px; /* @kind spacing */
+  --border-w-2:  1.5px; /* @kind spacing */
+
+  /* Shadows — warm, ink-tinted, soft */
+  --shadow-xs: 0 1px 2px rgba(24, 33, 29, 0.05);
+  --shadow-sm: 0 1px 3px rgba(24, 33, 29, 0.07), 0 1px 2px rgba(24, 33, 29, 0.04);
+  --shadow-md: 0 4px 12px rgba(24, 33, 29, 0.08);
+  --shadow-lg: 0 12px 32px rgba(24, 33, 29, 0.10);
+  --shadow-xl: 0 24px 60px rgba(24, 33, 29, 0.14);
+  --shadow-brand: 0 8px 24px rgba(17, 90, 67, 0.18);
+
+  /* Motion — gentle, no bounce */
+  --ease-out:    cubic-bezier(0.22, 1, 0.36, 1); /* @kind other */
+  --ease-in-out: cubic-bezier(0.45, 0, 0.25, 1); /* @kind other */
+  --dur-fast:    120ms; /* @kind other */
+  --dur-base:    200ms; /* @kind other */
+  --dur-slow:    320ms; /* @kind other */
+}
