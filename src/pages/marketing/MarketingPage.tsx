@@ -12,7 +12,7 @@ const FEATURES = [
   { icon: 'scale', bg: 'var(--clay-50)', fg: 'var(--clay-700)', title: 'Juridisk HR-hjælp', body: 'Gratis indledende samtale og rådgivning inden for HR og ansættelsesret, når du har brug for det.' },
 ] as const;
 
-const TRUST_LOGOS = ['Rotpunkt', 'STREG', 'Conmedia', 'holion', 'QAMPO', '29x', 'Seacabin'];
+const TRUST_LOGOS = ['Bjerget Studio', 'Nordkaj', 'Havly', 'Lindeholm', 'Solbjerg', 'Kvistgaard', 'Fjordlinje'];
 
 export function MarketingPage() {
   return (
@@ -118,10 +118,10 @@ export function MarketingPage() {
             <div className="eyebrow" style={{ color: 'var(--green-200)' }}>Udtalelse</div>
             <p className="q">&quot;Systemet er en lifesaver. En platform der holder dig venligt i hånden og sørger for, at alt det nødvendige bliver håndteret nemt.&quot;</p>
             <div className="by">
-              <span className="av" style={{ background: 'var(--green-600)', color: '#fff' }}>HP</span>
+              <span className="av" style={{ background: 'var(--green-600)', color: '#fff' }}>TL</span>
               <div>
-                <div style={{ fontWeight: 700 }}>Henrik Pedersen</div>
-                <div style={{ fontSize: 13, color: 'var(--green-200)' }}>Ejer & CEO, 365</div>
+                <div style={{ fontWeight: 700 }}>Thomas Lindgren</div>
+                <div style={{ fontSize: 13, color: 'var(--green-200)' }}>Ejer & CEO, Nordkaj</div>
               </div>
             </div>
           </div>
