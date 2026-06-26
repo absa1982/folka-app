@@ -1,0 +1,37 @@
+<!-- @dsCard group="Brand" viewport="700x220" name="Logo & mark" subtitle="Wordmark, reversed, and the sprout app-mark" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; padding: 0; background: var(--surface-card); display: grid; grid-template-columns: 1fr 1fr; }
+  .panel { padding: 28px 32px; display: flex; align-items: center; gap: 18px; }
+  .light { background: var(--surface-card); }
+  .dark { background: var(--green-800); }
+  .cap { font-family: var(--font-mono); font-size: 11px; }
+  .light .cap { color: var(--text-subtle); }
+  .dark .cap { color: var(--green-200); }
+  img { display: block; }
+  .stack { display: flex; flex-direction: column; gap: 10px; }
+</style>
+</head>
+<body>
+  <div class="panel light">
+    <div class="stack">
+      <img src="../assets/folka-logo.svg" alt="Folka" width="150">
+      <span class="cap">folka-logo.svg</span>
+    </div>
+    <div class="stack" style="align-items:center">
+      <img src="../assets/folka-mark.svg" alt="Folka mark" width="48">
+      <span class="cap">mark</span>
+    </div>
+  </div>
+  <div class="panel dark">
+    <div class="stack">
+      <img src="../assets/folka-logo-white.svg" alt="Folka" width="150">
+      <span class="cap">folka-logo-white.svg</span>
+    </div>
+  </div>
+</body>
+</html>

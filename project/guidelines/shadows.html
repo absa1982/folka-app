@@ -1,0 +1,25 @@
+<!-- @dsCard group="Spacing" viewport="700x180" name="Shadows & elevation" subtitle="Soft, warm, ink-tinted — xs through xl + brand" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; padding: 28px 24px; background: var(--sand-50); }
+  .row { display: flex; gap: 22px; }
+  .item { text-align: center; }
+  .box { width: 90px; height: 64px; background: var(--white); border-radius: var(--radius-lg); }
+  .tok { font-family: var(--font-mono); font-size: 11px; color: var(--text-muted); margin-top: 12px; }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="item"><div class="box" style="box-shadow:var(--shadow-xs)"></div><div class="tok">xs</div></div>
+    <div class="item"><div class="box" style="box-shadow:var(--shadow-sm)"></div><div class="tok">sm · card</div></div>
+    <div class="item"><div class="box" style="box-shadow:var(--shadow-md)"></div><div class="tok">md · hover</div></div>
+    <div class="item"><div class="box" style="box-shadow:var(--shadow-lg)"></div><div class="tok">lg</div></div>
+    <div class="item"><div class="box" style="box-shadow:var(--shadow-xl)"></div><div class="tok">xl · modal</div></div>
+    <div class="item"><div class="box" style="box-shadow:var(--shadow-brand);background:var(--green-600)"></div><div class="tok">brand</div></div>
+  </div>
+</body>
+</html>

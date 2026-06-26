@@ -1,0 +1,25 @@
+<!-- @dsCard group="Type" viewport="700x180" name="Mono & tabular numerals" subtitle="JetBrains Mono for time, hours, money, dates" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; padding: 24px; background: var(--surface-card); font-family: var(--font-mono); }
+  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 32px; }
+  .item { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--sand-100); padding-bottom: 8px; }
+  .k { font-family: var(--font-sans); font-size: 13px; color: var(--text-muted); }
+  .v { font-variant-numeric: tabular-nums; font-size: 18px; font-weight: 600; color: var(--text-heading); }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div class="item"><span class="k">Worked this week</span><span class="v">37,5 t</span></div>
+    <div class="item"><span class="k">Clock</span><span class="v">08:30–16:15</span></div>
+    <div class="item"><span class="k">Monthly</span><span class="v">kr. 500,-</span></div>
+    <div class="item"><span class="k">Date</span><span class="v">28. feb 2026</span></div>
+    <div class="item"><span class="k">Overtime</span><span class="v">+2,25 t</span></div>
+    <div class="item"><span class="k">Employees</span><span class="v">042</span></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!-- @dsCard group="Slides" viewport="1280x720" name="Comparison slide" subtitle="Before / after two-column layout" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="slides.css">
+<style>
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 48px; flex: 1; }
+  .col { border-radius: var(--radius-xl); padding: 36px; display: flex; flex-direction: column; }
+  .col.before { background: var(--surface-card); border: 1px solid var(--border-subtle); }
+  .col.after { background: var(--green-700); color: #fff; box-shadow: var(--shadow-brand); }
+  .col .tag { font-size: 14px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+  .col.before .tag { color: var(--text-subtle); }
+  .col.after .tag { color: var(--green-200); }
+  .col h3 { font-size: 30px; font-weight: 800; letter-spacing: -0.02em; margin: 10px 0 22px; }
+  .col.before h3 { color: var(--ink-900); }
+  .col ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 16px; }
+  .col li { display: flex; gap: 12px; font-size: 19px; line-height: 1.4; }
+  .col li svg { flex: none; margin-top: 3px; }
+  .col.before li { color: var(--text-muted); }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="pad">
+    <div class="eyebrow" style="margin-bottom:18px">03 · Why Folka</div>
+    <h2 style="max-width:16em">From scattered to settled</h2>
+    <div class="cols">
+      <div class="col before">
+        <span class="tag">Uden Folka</span>
+        <h3>Spreadsheets & gæt</h3>
+        <ul>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#97A09A" stroke-width="2.4" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> Timesedler i e-mail og Excel</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#97A09A" stroke-width="2.4" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> Manuel onboarding hver gang</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#97A09A" stroke-width="2.4" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> Risiko for bøder ved kontrol</li>
+        </ul>
+      </div>
+      <div class="col after">
+        <span class="tag">Med Folka</span>
+        <h3>Alt samlet ét sted</h3>
+        <ul>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A9D8C5" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Tidsregistrering på ét klik</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A9D8C5" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Genbrugelige checklister</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A9D8C5" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Altid lovmedholdelig</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="foot">
+    <img src="../assets/folka-logo.svg" alt="Folka">
+    <span class="pg">04</span>
+  </div>
+</div>
+</body>
+</html>

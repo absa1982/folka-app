@@ -1,0 +1,257 @@
+<!-- @dsCard group="Marketing" viewport="1280x900" name="Marketing homepage" subtitle="Hero, features, trust, pricing, CTA — warm Folka brand" -->
+<!-- @startingPoint section="Marketing" subtitle="Folka marketing homepage" viewport="1280x900" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Folka — HR & time, in one calm place</title>
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<style>
+  body { margin: 0; background: var(--surface-page); color: var(--text-body); }
+  .wrap { max-width: var(--container-max); margin: 0 auto; padding: 0 32px; }
+  a { color: inherit; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; font-weight: 600; font-size: 15px; padding: 12px 22px; border-radius: var(--radius-md); cursor: pointer; text-decoration: none; transition: background var(--dur-fast) var(--ease-out), transform var(--dur-fast); border: 1px solid transparent; }
+  .btn:hover { text-decoration: none; }
+  .btn-primary { background: var(--green-600); color: #fff; box-shadow: var(--shadow-brand); }
+  .btn-primary:hover { background: var(--green-700); }
+  .btn-secondary { background: var(--white); color: var(--text-heading); border-color: var(--border-strong); }
+  .btn-secondary:hover { background: var(--sand-100); }
+  .btn-ghost { color: var(--text-heading); }
+  .btn-ghost:hover { background: var(--sand-100); }
+  .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--green-700); }
+  .ico { width: 20px; height: 20px; display: inline-flex; }
+
+  nav.top { position: sticky; top: 0; z-index: 50; background: rgba(250,248,243,0.82); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border-subtle); }
+  nav.top .row { display: flex; align-items: center; gap: 28px; height: 68px; }
+  nav.top .links { display: flex; gap: 24px; font-size: 14px; font-weight: 500; color: var(--text-body); }
+  nav.top .links a:hover { color: var(--green-700); }
+
+  .hero { padding: 72px 0 56px; }
+  .hero-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 56px; align-items: center; }
+  h1.hero-title { font-size: 56px; line-height: 1.03; letter-spacing: -0.03em; font-weight: 800; color: var(--ink-900); }
+  .hero-lead { font-size: 19px; line-height: 1.55; color: var(--text-muted); margin-top: 20px; max-width: 30em; }
+  .hero-cta { display: flex; gap: 12px; margin-top: 28px; flex-wrap: wrap; }
+  .hero-note { display: flex; align-items: center; gap: 8px; margin-top: 18px; font-size: 13px; color: var(--text-muted); }
+
+  /* product mock */
+  .mock { background: var(--white); border: 1px solid var(--border-subtle); border-radius: var(--radius-2xl); box-shadow: var(--shadow-lg); overflow: hidden; }
+  .mock-top { display: flex; align-items: center; gap: 8px; padding: 14px 18px; border-bottom: 1px solid var(--border-subtle); }
+  .dot { width: 10px; height: 10px; border-radius: 50%; }
+  .mock-body { padding: 20px; display: flex; flex-direction: column; gap: 12px; background: var(--sand-50); }
+  .mrow { display: flex; align-items: center; gap: 12px; background: var(--white); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 12px 14px; }
+  .av { width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; flex: none; }
+  .pill { font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 999px; display: inline-flex; align-items: center; gap: 6px; }
+  .pdot { width: 7px; height: 7px; border-radius: 50%; }
+  .mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+
+  .trust { padding: 28px 0 8px; }
+  .trust .label { text-align: center; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--text-subtle); margin-bottom: 18px; }
+  .trust .logos { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px 36px; }
+  .trust .logos span { font-size: 17px; font-weight: 700; color: var(--ink-400); letter-spacing: -0.01em; }
+
+  section.block { padding: 80px 0; }
+  .sec-head { max-width: 620px; }
+  .sec-head h2 { font-size: 38px; letter-spacing: -0.02em; font-weight: 800; color: var(--ink-900); margin-top: 10px; }
+  .sec-head p { font-size: 17px; color: var(--text-muted); margin-top: 12px; line-height: 1.55; }
+
+  .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px; }
+  .feature { background: var(--white); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 24px; box-shadow: var(--shadow-sm); transition: box-shadow var(--dur-base) var(--ease-out), transform var(--dur-base); }
+  .feature:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+  .feature .fico { width: 44px; height: 44px; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+  .feature h3 { font-size: 18px; font-weight: 700; color: var(--ink-900); }
+  .feature p { font-size: 14px; color: var(--text-muted); margin-top: 8px; line-height: 1.55; }
+
+  .quote-block { background: var(--green-800); border-radius: var(--radius-2xl); padding: 56px; color: #fff; }
+  .quote-block .q { font-size: 27px; line-height: 1.4; font-weight: 600; letter-spacing: -0.01em; max-width: 24em; }
+  .quote-block .by { display: flex; align-items: center; gap: 12px; margin-top: 28px; }
+
+  .pricing { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px; }
+  .price { background: var(--white); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; }
+  .price.feat { border: 1.5px solid var(--green-500); box-shadow: var(--shadow-md); }
+  .price .tier { font-size: 13px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--green-700); }
+  .price .amt { font-size: 40px; font-weight: 800; color: var(--ink-900); margin: 12px 0 2px; letter-spacing: -0.02em; }
+  .price .amt span { font-size: 16px; font-weight: 600; color: var(--text-muted); }
+  .price ul { list-style: none; padding: 0; margin: 18px 0 22px; display: flex; flex-direction: column; gap: 10px; }
+  .price li { display: flex; gap: 9px; font-size: 14px; color: var(--text-body); align-items: center; }
+  .price li .ico { width: 16px; height: 16px; color: var(--green-600); flex: none; }
+
+  .cta { background: var(--clay-50); border-radius: var(--radius-2xl); padding: 56px; text-align: center; }
+  .cta h2 { font-size: 38px; letter-spacing: -0.02em; font-weight: 800; color: var(--ink-900); }
+  .cta p { font-size: 17px; color: var(--text-muted); margin-top: 12px; }
+
+  footer { padding: 56px 0 40px; border-top: 1px solid var(--border-subtle); margin-top: 24px; }
+  footer .cols { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 32px; }
+  footer h4 { font-size: 13px; font-weight: 700; color: var(--ink-900); margin-bottom: 14px; }
+  footer a { display: block; font-size: 14px; color: var(--text-muted); margin-bottom: 10px; }
+  footer a:hover { color: var(--green-700); }
+  @media (max-width: 920px) { .hero-grid, .features, .pricing, footer .cols { grid-template-columns: 1fr; } h1.hero-title { font-size: 42px; } }
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <div class="wrap row">
+    <img src="../../assets/folka-logo.svg" alt="Folka" height="30">
+    <div class="links" style="margin-left:8px">
+      <a href="#features">Funktioner</a>
+      <a href="#pricing">Priser</a>
+      <a href="#">Om</a>
+      <a href="#">Ressourcer</a>
+    </div>
+    <div style="flex:1"></div>
+    <a class="btn btn-ghost" href="#">Log ind</a>
+    <a class="btn btn-primary" href="#">Kom i gang</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">HR · Tid · Onboarding</div>
+      <h1 class="hero-title">All your people, in one calm place.</h1>
+      <p class="hero-lead">Folka samler tidsregistrering, onboarding, medarbejdere og udstyr ét sted — så du sparer tid, undgår bøder og får ro i maven.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#">Prøv gratis i 1 måned <i data-lucide="arrow-right" class="ico"></i></a>
+        <a class="btn btn-secondary" href="#"><i data-lucide="play-circle" class="ico"></i> Book en demo</a>
+      </div>
+      <div class="hero-note"><i data-lucide="shield-check" class="ico" style="width:16px;height:16px;color:var(--green-600)"></i> GDPR-sikker · Overholder lovkrav om tidsregistrering</div>
+    </div>
+
+    <div class="mock" aria-hidden="true">
+      <div class="mock-top">
+        <span class="dot" style="background:#E8674A"></span><span class="dot" style="background:#E0A12E"></span><span class="dot" style="background:#1E8A63"></span>
+        <span style="margin-left:10px;font-size:13px;font-weight:600;color:var(--text-muted)">Tidsregistrering · Uge 9</span>
+      </div>
+      <div class="mock-body">
+        <div class="mrow">
+          <span class="av" style="background:var(--green-100);color:var(--green-700)">AM</span>
+          <div style="flex:1"><div style="font-weight:600;font-size:14px;color:var(--ink-900)">Anna Mortensen</div><div class="mono" style="font-size:12px;color:var(--text-muted)">37,5 t</div></div>
+          <span class="pill" style="background:var(--warning-bg);color:var(--warning)"><span class="pdot" style="background:var(--warning)"></span>Afventer</span>
+        </div>
+        <div class="mrow">
+          <span class="av" style="background:var(--clay-100);color:var(--clay-700)">LF</span>
+          <div style="flex:1"><div style="font-weight:600;font-size:14px;color:var(--ink-900)">Lars Frank</div><div class="mono" style="font-size:12px;color:var(--text-muted)">40,0 t</div></div>
+          <span class="pill" style="background:var(--success-bg);color:var(--success)"><span class="pdot" style="background:var(--success)"></span>Godkendt</span>
+        </div>
+        <div class="mrow">
+          <span class="av" style="background:var(--info-bg);color:var(--info)">CH</span>
+          <div style="flex:1"><div style="font-weight:600;font-size:14px;color:var(--ink-900)">Camilla Holt</div><div class="mono" style="font-size:12px;color:var(--text-muted)">30,0 t</div></div>
+          <span class="pill" style="background:var(--success-bg);color:var(--success)"><span class="pdot" style="background:var(--success)"></span>Godkendt</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 4px 0">
+          <span style="font-size:13px;color:var(--text-muted)">6 uger afventer</span>
+          <span class="btn btn-primary" style="padding:8px 14px;font-size:13px">Godkend alle</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="trust wrap">
+  <div class="label">Brugt af danske SMV'er</div>
+  <div class="logos">
+    <span>Rotpunkt</span><span>STREG</span><span>Conmedia</span><span>holion</span><span>QAMPO</span><span>29x</span><span>Seacabin</span>
+  </div>
+</div>
+
+<section class="block" id="features">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Funktioner</div>
+      <h2>One system for everything HR</h2>
+      <p>Et digitalt og brugervenligt HR-system, der skaber overblik, struktur og flow i rekruttering, onboarding og personaleledelse.</p>
+    </div>
+    <div class="features">
+      <div class="feature"><div class="fico" style="background:var(--green-50);color:var(--green-700)"><i data-lucide="clock" class="ico"></i></div><h3>Tidsregistrering</h3><p>Medarbejdere registrerer arbejdstid, ferie og fravær med ét klik. Du overholder alle relevante love og regler.</p></div>
+      <div class="feature"><div class="fico" style="background:var(--clay-50);color:var(--clay-700)"><i data-lucide="list-checks" class="ico"></i></div><h3>Onboarding & offboarding</h3><p>Genbrugelige checklister gør første og sidste arbejdsdag tryg — uden manuelle fejl.</p></div>
+      <div class="feature"><div class="fico" style="background:var(--info-bg);color:var(--info)"><i data-lucide="users" class="ico"></i></div><h3>Medarbejdere</h3><p>Kontrakter, dokumenter og personoplysninger samlet ét sted — GDPR-sikkert.</p></div>
+      <div class="feature"><div class="fico" style="background:var(--warning-bg);color:var(--warning)"><i data-lucide="laptop" class="ico"></i></div><h3>Udstyr</h3><p>Hold styr på hvilken medarbejder, der har fået hvilken computer, telefon eller nøgle.</p></div>
+      <div class="feature"><div class="fico" style="background:var(--green-50);color:var(--green-700)"><i data-lucide="user-search" class="ico"></i></div><h3>Rekruttering</h3><p>En kandidatoversigt der samler ansøgninger, kategorier og interne kommentarer.</p></div>
+      <div class="feature"><div class="fico" style="background:var(--clay-50);color:var(--clay-700)"><i data-lucide="scale" class="ico"></i></div><h3>Juridisk HR-hjælp</h3><p>Gratis indledende samtale og rådgivning inden for HR og ansættelsesret, når du har brug for det.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" style="padding-top:0">
+  <div class="wrap">
+    <div class="quote-block">
+      <div class="eyebrow" style="color:var(--green-200)">Udtalelse</div>
+      <p class="q">"Systemet er en lifesaver. En platform der holder dig venligt i hånden og sørger for, at alt det nødvendige bliver håndteret nemt."</p>
+      <div class="by">
+        <span class="av" style="background:var(--green-600);color:#fff">HP</span>
+        <div><div style="font-weight:700">Henrik Pedersen</div><div style="font-size:13px;color:var(--green-200)">Ejer & CEO, 365</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="pricing" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Priser</div>
+      <h2>Start gratis</h2>
+      <p>Opret en profil på 3 minutter, tilknyt din virksomhed, og få straks adgang til dit nye HR-værktøj.</p>
+    </div>
+    <div class="pricing">
+      <div class="price">
+        <div class="tier">Freemium</div>
+        <div class="amt">0,-<span> /md</span></div>
+        <ul>
+          <li><i data-lucide="check" class="ico"></i> Op til 10 medarbejdere</li>
+          <li><i data-lucide="check" class="ico"></i> 1 admin inkluderet</li>
+          <li><i data-lucide="check" class="ico"></i> Onboarding & medarbejdere</li>
+        </ul>
+        <a class="btn btn-secondary" href="#" style="margin-top:auto;justify-content:center">Vælg Freemium</a>
+      </div>
+      <div class="price feat">
+        <div style="display:flex;justify-content:space-between;align-items:center"><div class="tier">Premium</div><span class="pill" style="background:var(--green-50);color:var(--green-700)">Mest populær</span></div>
+        <div class="amt">500,-<span> /md</span></div>
+        <ul>
+          <li><i data-lucide="check" class="ico"></i> Op til 100 medarbejdere</li>
+          <li><i data-lucide="check" class="ico"></i> 2 admins inkluderet</li>
+          <li><i data-lucide="check" class="ico"></i> Rekruttering & udstyr</li>
+          <li><i data-lucide="check" class="ico"></i> App til tidsregistrering</li>
+        </ul>
+        <a class="btn btn-primary" href="#" style="margin-top:auto;justify-content:center">Vælg Premium</a>
+      </div>
+      <div class="price">
+        <div class="tier">Premium+</div>
+        <div class="amt">2.500,-<span> /md</span></div>
+        <ul>
+          <li><i data-lucide="check" class="ico"></i> Ubegrænset medarbejdere</li>
+          <li><i data-lucide="check" class="ico"></i> 3 admins inkluderet</li>
+          <li><i data-lucide="check" class="ico"></i> Prioriteret support</li>
+        </ul>
+        <a class="btn btn-secondary" href="#" style="margin-top:auto;justify-content:center">Kontakt os</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" style="padding-top:0">
+  <div class="wrap">
+    <div class="cta">
+      <h2>Klar til lidt mere ro i maven?</h2>
+      <p>Test HR-systemet og app til tidsregistrering gratis i en måned.</p>
+      <a class="btn btn-primary" href="#" style="margin-top:24px">Opret gratis konto <i data-lucide="arrow-right" class="ico"></i></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap cols">
+    <div>
+      <img src="../../assets/folka-logo.svg" alt="Folka" height="28">
+      <p style="font-size:13px;color:var(--text-muted);margin-top:14px;max-width:24em">Den danske HR-platform der samler HR, tid og onboarding ét sted.</p>
+    </div>
+    <div><h4>Platform</h4><a href="#">Funktioner</a><a href="#">Priser</a><a href="#">Om Folka</a></div>
+    <div><h4>Ressourcer</h4><a href="#">Guides</a><a href="#">Skabeloner</a><a href="#">HR-ordbog</a></div>
+    <div><h4>Sikkerhed</h4><a href="#">Betingelser</a><a href="#">Privatlivspolitik</a><a href="#">GDPR</a></div>
+  </div>
+</footer>
+
+<script>lucide.createIcons();</script>
+</body>
+</html>

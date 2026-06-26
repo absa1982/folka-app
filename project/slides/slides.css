@@ -1,0 +1,29 @@
+/* Folka slides — shared 16:9 deck styling built on design tokens. */
+.slide {
+  width: 1280px; height: 720px; position: relative; overflow: hidden;
+  background: var(--surface-page); color: var(--text-body);
+  font-family: var(--font-sans); display: flex; flex-direction: column;
+  box-sizing: border-box;
+}
+.slide * { box-sizing: border-box; }
+.slide .pad { padding: 80px 88px; flex: 1; display: flex; flex-direction: column; }
+.slide .eyebrow { font-size: 16px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--green-700); }
+.slide h1 { font-size: 76px; line-height: 1.02; letter-spacing: -0.03em; font-weight: 800; color: var(--ink-900); }
+.slide h2 { font-size: 52px; line-height: 1.06; letter-spacing: -0.02em; font-weight: 800; color: var(--ink-900); }
+.slide .lead { font-size: 26px; line-height: 1.5; color: var(--text-muted); }
+.slide .mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+
+/* footer bar */
+.slide .foot { position: absolute; left: 88px; right: 88px; bottom: 40px; display: flex; align-items: center; justify-content: space-between; }
+.slide .foot .pg { font-family: var(--font-mono); font-size: 14px; color: var(--text-subtle); }
+.slide .foot img { height: 26px; opacity: .9; }
+
+/* dark variant */
+.slide.dark { background: var(--green-800); color: #fff; }
+.slide.dark h1, .slide.dark h2 { color: #fff; }
+.slide.dark .eyebrow { color: var(--green-200); }
+.slide.dark .lead { color: var(--green-100); }
+.slide.dark .foot .pg { color: var(--green-200); }
+
+/* sand variant */
+.slide.sand { background: var(--sand-100); }

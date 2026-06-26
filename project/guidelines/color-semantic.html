@@ -1,0 +1,36 @@
+<!-- @dsCard group="Colors" viewport="700x150" name="Semantic colors" subtitle="Status hues with soft tinted backgrounds" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; padding: 20px; background: var(--surface-card); }
+  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .cell { border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-subtle); }
+  .solid { height: 40px; }
+  .pill { padding: 8px 12px; font-size: 13px; font-weight: 600; }
+  .name { font-family: var(--font-mono); font-size: 11px; color: var(--text-muted); margin-top: 6px; }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div>
+      <div class="cell"><div class="solid" style="background:var(--success)"></div><div class="pill" style="background:var(--success-bg);color:var(--success)">Approved</div></div>
+      <div class="name">--success</div>
+    </div>
+    <div>
+      <div class="cell"><div class="solid" style="background:var(--warning)"></div><div class="pill" style="background:var(--warning-bg);color:var(--warning)">Pending</div></div>
+      <div class="name">--warning</div>
+    </div>
+    <div>
+      <div class="cell"><div class="solid" style="background:var(--danger)"></div><div class="pill" style="background:var(--danger-bg);color:var(--danger)">Overdue</div></div>
+      <div class="name">--danger</div>
+    </div>
+    <div>
+      <div class="cell"><div class="solid" style="background:var(--info)"></div><div class="pill" style="background:var(--info-bg);color:var(--info)">Info</div></div>
+      <div class="name">--info</div>
+    </div>
+  </div>
+</body>
+</html>

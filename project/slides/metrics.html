@@ -1,0 +1,33 @@
+<!-- @dsCard group="Slides" viewport="1280x720" name="Metrics slide" subtitle="Three big tabular figures with labels" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="slides.css">
+<style>
+  .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 56px; }
+  .metric { background: var(--surface-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-xl); padding: 36px; box-shadow: var(--shadow-sm); }
+  .metric .big { font-family: var(--font-mono); font-size: 72px; font-weight: 800; letter-spacing: -0.03em; color: var(--green-700); line-height: 1; }
+  .metric .lbl { font-size: 19px; color: var(--text-muted); margin-top: 14px; }
+  .metric .delta { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600; color: var(--success); background: var(--success-bg); padding: 5px 11px; border-radius: 999px; margin-top: 18px; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="pad">
+    <div class="eyebrow" style="margin-bottom:18px">02 · Traction</div>
+    <h2 style="max-width:16em">Growth that compounds quietly</h2>
+    <div class="metrics">
+      <div class="metric"><div class="big">1.240</div><div class="lbl">Virksomheder</div><div class="delta">+38% YoY</div></div>
+      <div class="metric"><div class="big">96%</div><div class="lbl">Årlig fastholdelse</div><div class="delta">+4 pt</div></div>
+      <div class="metric"><div class="big">4,8</div><div class="lbl">Gns. anmeldelse</div><div class="delta">312 reviews</div></div>
+    </div>
+  </div>
+  <div class="foot">
+    <img src="../assets/folka-logo.svg" alt="Folka">
+    <span class="pg">03</span>
+  </div>
+</div>
+</body>
+</html>

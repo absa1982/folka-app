@@ -1,0 +1,79 @@
+<!-- @dsCard group="Components" viewport="700x520" name="HR — employee, time, checklist, candidate, equipment" subtitle="Domain components composed from the primitives" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>
+  body { margin: 0; padding: 24px; background: var(--surface-page); }
+  .lbl { font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--text-muted); margin: 0 0 8px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; }
+  .panel { background: var(--surface-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); overflow: hidden; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+  const NS = window.FolkaDesignSystem_019e18;
+  const { EmployeeRow, TimeEntry, ChecklistItem, CandidateCard, EquipmentRow, IconButton } = NS;
+  const ic = (n) => <i data-lucide={n} style={{ width: 16, height: 16, display: 'flex' }} />;
+  const more = <IconButton icon={ic('more-horizontal')} aria-label="More" />;
+
+  function Demo() {
+    const [c, setC] = React.useState({ a: true, b: false, d: false });
+    return (
+      <div>
+        <div className="grid" style={{ marginBottom: 20 }}>
+          <div>
+            <div className="lbl">Employee rows</div>
+            <div className="panel">
+              <EmployeeRow name="Anna Mortensen" role="Designer" department="Udvikling" status="active" actions={more} />
+              <EmployeeRow name="Lars Frank" role="Sales lead" department="Salg" status="active" actions={more} />
+              <EmployeeRow name="Sofie Holm" role="Intern" department="Marketing" status="invited" actions={more} />
+            </div>
+          </div>
+          <div>
+            <div className="lbl">Time entries — week</div>
+            <div className="panel">
+              <TimeEntry day="Man" date="24/2" clockIn="08:30" clockOut="16:15" hours="7,5 t" />
+              <TimeEntry day="Tir" date="25/2" clockIn="08:00" clockOut="16:00" hours="8,0 t" />
+              <TimeEntry day="Ons" date="26/2" type="sick" hours="—" note="Sick child" />
+              <TimeEntry day="Tor" date="27/2" type="holiday" hours="—" />
+            </div>
+          </div>
+        </div>
+        <div className="grid">
+          <div>
+            <div className="lbl">Onboarding checklist</div>
+            <div className="panel" style={{ padding: '4px 14px' }}>
+              <ChecklistItem label="Sign contract" done={c.a} onToggle={() => setC(s => ({...s, a: !s.a}))} due="20/2" assignee="Anna M" />
+              <ChecklistItem label="Order laptop" done={c.b} onToggle={() => setC(s => ({...s, b: !s.b}))} due="1/3" overdue assignee="Lars F" />
+              <ChecklistItem label="Create IT accounts" done={c.d} onToggle={() => setC(s => ({...s, d: !s.d}))} due="3/3" assignee="Sine H" />
+            </div>
+            <div className="lbl" style={{ marginTop: 20 }}>Equipment</div>
+            <div className="panel">
+              <EquipmentRow name='MacBook Pro 14"' category="Laptop" serial="C02XL0" assignedTo="Anna Mortensen" status="assigned" iconNode={ic('laptop')} actions={more} />
+              <EquipmentRow name="Office key #12" category="Key" status="available" iconNode={ic('key-round')} actions={more} />
+            </div>
+          </div>
+          <div>
+            <div className="lbl">Candidate cards</div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+              <CandidateCard name="Mette Bjerg" role="Frontend dev" appliedFor="Designer" tags={['Figma', 'React']} rating={4} isNew />
+              <CandidateCard name="Jesper Nielsen" role="Account mgr" appliedFor="Sales lead" tags={['B2B', 'CRM']} rating={3} />
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+  setTimeout(() => window.lucide && window.lucide.createIcons(), 80);
+</script>
+</body>
+</html>
