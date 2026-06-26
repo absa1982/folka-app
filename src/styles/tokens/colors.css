@@ -1,0 +1,75 @@
+/* ============================================================
+   Folka — Color tokens
+   Warm, calm, trustworthy. Spruce-green primary, warm sand
+   neutrals, clay accent. Built for HR/time-tracking surfaces.
+   ============================================================ */
+:root {
+  /* --- Brand: Spruce green (growth, calm, "ro i maven") --- */
+  --green-50:  #EAF5F0;
+  --green-100: #D4ECE2;
+  --green-200: #A9D8C5;
+  --green-300: #74BFA1;
+  --green-400: #41A47E;
+  --green-500: #1E8A63;
+  --green-600: #157254;
+  --green-700: #115A43;
+  --green-800: #0E4734;
+  --green-900: #0A3527;
+
+  /* --- Accent: Clay (warmth, highlights, illustration) --- */
+  --clay-50:  #FCEEE9;
+  --clay-100: #FBE3DC;
+  --clay-300: #F2A993;
+  --clay-500: #E8674A;
+  --clay-600: #D2543C;
+  --clay-700: #B0432F;
+
+  /* --- Warm neutrals (sand) --- */
+  --sand-50:  #FAF8F3;  /* page background */
+  --sand-100: #F3EFE7;  /* subtle fill / hover */
+  --sand-200: #E8E2D6;  /* borders, dividers */
+  --sand-300: #D8D0C0;  /* strong border */
+  --white:    #FFFFFF;
+
+  /* --- Ink (warm, green-tinted near-black) --- */
+  --ink-900: #18211D;  /* headings */
+  --ink-700: #3A443E;  /* body */
+  --ink-500: #6B756E;  /* muted / secondary */
+  --ink-400: #97A09A;  /* placeholder / subtle */
+  --ink-300: #C2C8C2;  /* disabled text on light */
+
+  /* --- Semantic hues --- */
+  --success:     #1E8A63;
+  --success-bg:  #E3F2EA;
+  --warning:     #C7841A;
+  --warning-bg:  #FBEFD6;
+  --danger:      #D2543C;
+  --danger-bg:   #FBE2DC;
+  --info:        #3B72A6;
+  --info-bg:     #E5EFF6;
+
+  /* ============================================================
+     Semantic aliases — reference these in components, not raw ramps
+     ============================================================ */
+  --surface-page:      var(--sand-50);
+  --surface-card:      var(--white);
+  --surface-sunken:    var(--sand-100);
+  --surface-inverse:   var(--green-800);
+  --surface-brand:     var(--green-600);
+  --surface-brand-soft:var(--green-50);
+  --surface-accent-soft:var(--clay-50);
+
+  --border-subtle:  var(--sand-200);
+  --border-strong:  var(--sand-300);
+  --border-brand:   var(--green-600);
+
+  --text-heading:   var(--ink-900);
+  --text-body:      var(--ink-700);
+  --text-muted:     var(--ink-500);
+  --text-subtle:    var(--ink-400);
+  --text-on-brand:  var(--white);
+  --text-brand:     var(--green-700);
+  --text-link:      var(--green-700);
+
+  --focus-ring: 0 0 0 3px rgba(30, 138, 99, 0.28);
+}
